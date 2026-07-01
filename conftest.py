@@ -43,7 +43,7 @@ def pytest_runtest_makereport(item,call):
             
             from datetime import datetime
             timestamp = datetime.now().strftime("%d%m%Y_%H%M%S")
-            file_name = target / f"{item.name}.png"
+            file_name = target / f"{item.name}_{timestamp}.png"
 
             driver.save_screenshot(str(file_name))
 
